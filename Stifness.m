@@ -20,7 +20,7 @@ f = polyfit(ea(r(1)-n:(r(1)+n)), Sd(r(1)-n:r(1)+n),1); %Fitting a linear tanget 
 fout = f;
 for i = 1:10
     % f = polyfit(ea((r(1)+n):r(1)), Sd((r(1)+n):r(1)),1)
-    n = n + 100;
+    n = n + 100; % Change 100 based on the number of data points 
 f = polyfit(ea(r(1)-n:(r(1)+n)), Sd(r(1)-n:r(1)+n),1);
 fout = [fout;f];
 if (fout(i+1,1)-fout(i,1))/fout(i+1,1) < 0.01
